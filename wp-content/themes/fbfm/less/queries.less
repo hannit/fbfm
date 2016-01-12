@@ -1,0 +1,71 @@
+@import "elements.less";
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 22px;
+    }
+    .controls-menu {
+        left: -10px;
+        width: 120%;
+        .menu-item {
+            display: inline-block;
+            margin: 0 10px;
+            &.first {
+                text-align: right;
+            }
+            &:after, &:before {
+                content: "";
+                height: 100%;
+                position: absolute;
+                right: -10px;
+                top: 0;
+                width: 20px;
+                z-index: 1;
+                .transform(skew(-20deg, 0deg));
+            }
+            &:before {
+                right: auto;
+                left: -10px;
+            }
+        }
+    }
+
+    .navbar-collapse {
+        float: right;
+    }
+
+    .nav > li > a {
+        padding-right: 3px;
+        padding-left: 3px;
+    }
+
+    .header{
+        .header-inner{
+            padding: 50px 0 40px;
+        }
+    }
+    .modal-dialog {
+        width: 799px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+    .nav > li > a {
+        padding-right: 11px;
+        padding-left: 11px;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+    .header-bg {
+        max-height: 100%;
+    }
+}
